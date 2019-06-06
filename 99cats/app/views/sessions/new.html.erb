@@ -1,0 +1,15 @@
+<h1>Sign In</h1>
+<%# what if the user is signing in for the first time do they see their credentials? %>
+<form action="<%= session_url %>" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Username:
+    <input type="text" name="user[user_name]" value="<%= @user.user_name%>"> 
+  </label>
+  <br>
+  <label>Password:
+    <input type="password" name="user[password]" value="<%= @user.password%>"> 
+  </label>
+
+  <input type="submit" value="Sign In">
+
+</form>
